@@ -1,0 +1,60 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="row">
+    <!--'class="row"' is one of the classes of Bootstrap for setting a single row-->
+    <!--'class="col"' is one of the classes of Bootstrap for setting a single row-->
+    <div class="col-8 offset-2"> <!-- 'offset-2' will give a space or offset of 2 units from left -->
+        <br><br>
+        <h3>Create a New Listing</h3>
+        <form method="POST" action="/listings" class="needs-validation" novalidate enctype="multipart/form-data">
+
+            <div class="mb-4"> <!-- mb-4 provide margin-border of 4 units as defined in Bootstrap-->
+                <label for="title" class="form-label">Title</label>
+                <input name="listing[title]" placeholder="Enter title for your place" type="text" class="form-control" required>
+                <!-- Here we are making the title, descfription, image, price, etc as the properties of an Object called 'listing' -->
+                <div class="invalid-feedback">Please enter a valid title.</div> <!-- This can show success and failure message while filling the form. Which can be helpful if user mistook the valid data in the input fields -->
+            </div>
+
+            <div class="mb-4">
+                <label for="description" class="form-label">Description</label>
+                <textarea name="listing[description]" placeholder="Enter description for your place" class="form-control" required></textarea>
+            </div>
+
+            <!-- <div class="mb-4">
+                <label for="image" class="form-label">Image Link</label>
+                <input name="listing[image]" placeholder="Enter image URL/Link" type="text" class="form-control">
+                <div class="valid-feedback">Looks good!</div>
+            </div> -->
+
+            <div class="mb-4">
+                <label for="image" class="form-label">Upload Listing Image</label>
+                <input name="listing[image]" type="file" class="form-control" required>
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+
+            <div class="row">
+                <!-- 'col-md-4' and 'col-md-8' is used so that price and country comes in same row with their column size in the ratio of '4 and 8' when the screen size is more than medium size defined in Bootstrap -->
+                <div class="mb-4 col-md-4">
+                    <label for="price" class="form-label">Price</label>
+                    <input name="listing[price]" placeholder="Enter price" type="number" class="form-control" required>
+                    <div class="invalid-feedback">Please enter a valid price in numbers.</div>
+                </div>
+
+                <div class="mb-4 col-md-8">
+                    <label for="country" class="form-label">Country</label>
+                    <input name="listing[country]" placeholder="Enter country" type="text" class="form-control" required>
+                    <div class="invalid-feedback">Country name should be valid.</div>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label for="location" class="form-label">Location</label>
+                <input name="listing[location]" placeholder="Enter location" type="text" class="form-control" required>
+                <div class="invalid-feedback">Location should be valid.</div>
+            </div>
+
+            <button class="btn btn-dark add-btn">Add</button>
+            <br><br>
+        </form>
+    </div>
+</div>

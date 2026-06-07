@@ -1,0 +1,124 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    flex: 1; 
+    /* this will give the main-content full space as required and the footer will take its required space required space,
+     this will make the footer to be stuck to the bottom of the page */ 
+}
+
+/* Navbar */
+.navbar{
+    height: 5rem;
+    background-color: aliceblue;
+}
+
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link{
+    color: #222222 !important; /* '!important' is used to override our styling over Bootstrap's styling */
+}
+
+
+/* Footer */
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info-links, .f-info-socials, .f-info-brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i{
+    font-size: 1.25rem;
+    margin-right: 1rem;
+}
+
+.f-info{
+    text-align: center;
+    height: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    background-color: #ebebeb;
+}
+
+
+/* Cards */
+.listing-card{
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.card-img-top{
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.card-body{
+    padding: 0;
+}
+
+
+.card-text p{
+    font-weight: 400 !important;
+}
+
+.listing-link{
+    text-decoration: none;
+}
+
+/* Card Effect */
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    background-color: white;
+    opacity: 0.4;
+}
+
+/* New Page */
+.add-btn{
+    background-color: #fe424d;
+    border: none;
+}
+
+/* Edit Page */
+.edit-btn{
+    background-color: #fe424d;
+    border: none;
+}
+
+/* Show Page */
+.show-img{
+    height: 50vh;
+}
+
+.logged-user-opts{
+    display: flex;
+    gap: 5rem;
+}
+
+
+/* Map */
+#map { 
+    height: 100px;
+    width: 100px;
+}
